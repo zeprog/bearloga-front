@@ -5,7 +5,7 @@ module.exports = {
   testEnvironment: "jest-environment-jsdom",
   setupFilesAfterEnv: [path.resolve(__dirname, "src/jest.setup.ts")],
   transform: {
-    "^.+\\.(ts|tsx|js|jsx)$": "babel-jest",
+    "^.+\\.(ts|tsx)$": ["babel-jest", { configFile: "./babel-jest.config.js" }],
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   moduleNameMapper: {
