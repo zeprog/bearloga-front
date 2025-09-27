@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FDFDFD;
+  --foreground: #F5F5F7;
+  --fonttitlecolor: #171717;
+  --fontsubtitlecolor: #555555;
+  --font-main-green-color: #2E7D32;
+  --font-primary-button-color: #fff;
+  --primary-button-hover: #27642A;
+  --primary-button-focus: #1B471D;
+  --primary-button-disabled-bg: #A5D6A7;
+  --secondary-button-bg: #F5F5F7;
+  --secondary-button-border: #2E7D32;
+  --secondary-button-hover: #E0E0E0;
+  --secondary-button-focus: #CCCCCC;
+  --ghost-button-hover: rgba(46, 125, 50, 0.1);
+  --ghost-button-focus: rgba(46, 125, 50, 0.2);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-fonttitlecolor: var(--fonttitlecolor);
+  --color-fontsubtitlecolor: var(--fontsubtitlecolor);
+  --color-main-green-color: var(--font-main-green-color);
+  --color-font-primary-button-color: var(--font-primary-button-color);
+  --color-primary-button-hover: var(--primary-button-hover);
+  --color-primary-button-focus: var(--primary-button-focus);
+  --color-primary-button-disabled-bg: var(--primary-button-disabled-bg);
+  --color-secondary-button-bg: var(--secondary-button-bg);
+  --color-secondary-button-border: var(--secondary-button-border);
+  --color-secondary-button-hover: var(--secondary-button-hover);
+  --color-secondary-button-focus: var(--secondary-button-focus);
+  --color-ghost-button-hover: var(--ghost-button-hover);
+  --color-ghost-button-focus: var(--ghost-button-focus);
+  --font-sans: var(--font-nunito-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    --foreground: #1E1E1E;
+    --fonttitlecolor: #E0E0E0;
+    --fontsubtitlecolor: #AAAAAA;
+    --font-main-green-color: #4CAF50;
+    --font-primary-button-color: #121212;
+    --primary-button-hover: #43A047;
+    --primary-button-focus: #2E7D32;
+    --primary-button-disabled-bg: rgba(46, 125, 50, 0.5);
+    --secondary-button-bg: #1E1E1E;
+    --secondary-button-border: #4CAF50;
+    --secondary-button-hover: #2A2A2A;
+    --secondary-button-focus: #333333;
+    --ghost-button-hover: rgba(76, 175, 80, 0.1);
+    --ghost-button-focus: rgba(76, 175, 80, 0.2);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--fonttitlecolor);
+  font-family: var(--font-sans), sans-serif;
+}
