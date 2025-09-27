@@ -16,6 +16,15 @@
   --secondary-button-focus: #CCCCCC;
   --ghost-button-hover: rgba(46, 125, 50, 0.1);
   --ghost-button-focus: rgba(46, 125, 50, 0.2);
+  --input-bg: #F5F5F7;
+  --input-border: #CCCCCC;
+  --input-border-hover: #AAAAAA;
+  --input-border-focus: #2E7D32;
+  --input-border-focus-box-shadow: rgba(46, 125, 50, 0.2);
+  --input-border-disabled: #CCCCCC;
+  --input-text-disabled: #AAAAAA;
+  --input-disabled-bg: #E0E0E0;
+  --input-error-border: #E53935;
 }
 
 @theme inline {
@@ -34,7 +43,15 @@
   --color-secondary-button-focus: var(--secondary-button-focus);
   --color-ghost-button-hover: var(--ghost-button-hover);
   --color-ghost-button-focus: var(--ghost-button-focus);
+  --color-input-bg: var(--input-bg);
+  --color-input-border: var(--input-border);
+  --color-input-border-hover: var(--input-border-hover);
+  --color-input-border-disabled: var(--input-border-disabled);
+  --color-input-disabled-bg: var(--input-disabled-bg);
+  --color-input-text-disabled: var(--input-text-disabled);
+  --color-input-error-border: var(--input-error-border);
   --font-sans: var(--font-nunito-sans);
+  --font-inter-sans: var(--font-inter-sans);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -54,6 +71,15 @@
     --secondary-button-focus: #333333;
     --ghost-button-hover: rgba(76, 175, 80, 0.1);
     --ghost-button-focus: rgba(76, 175, 80, 0.2);
+    --input-bg: #1E1E1E;
+    --input-border: #333333;
+    --input-border-hover: #555555;
+    --input-border-focus: #4CAF50;
+    --input-border-focus-box-shadow: rgba(76, 175, 80, 0.2);
+    --input-border-disabled: #333333;
+    --input-disabled-bg: #2A2A2A;
+    --input-text-disabled: #666666;
+    --input-error-border: #E53935;
   }
 }
 
@@ -61,4 +87,9 @@ body {
   background: var(--background);
   color: var(--fonttitlecolor);
   font-family: var(--font-sans), sans-serif;
+}
+
+.input:focus {
+  border-color: var(--input-border-focus);
+  box-shadow: 0 0 4px 2px var(--input-border-focus-box-shadow);
 }
